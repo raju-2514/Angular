@@ -1,0 +1,18 @@
+
+nav{
+    background-color: rgb(118, 183, 165);
+    padding: 60px;
+}
+li{
+    float: right;
+    list-style-type: none;
+}
+ul li{
+    display: inline-block;
+    padding: 10px;
+    margin-top: 5px;
+}
+li a{
+   text-decoration: none;
+   cursor: pointer;
+}
