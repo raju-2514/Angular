@@ -1,103 +1,27 @@
+<!-- <h1>Work in routing System</h1>
+<a routerLink="home">Home</a><br>
+<a routerLink="about">About</a><br>
+<a routerLink="user">User</a><br><br>
 
-<app-header></app-header>
+<a  routerLink="user/10">Raju</a><br>
+<a  routerLink="user/20">Mithun</a><br>
+<a  routerLink="user/30">Mim</a><br>
 
-    
+<router-outlet></router-outlet>
+<h2>The value of service data</h2>
+<li *ngFor="let data of appdata">
+    {{data.name}}
 
-<h1 class="{{title}}">Hello Angular {{title}}</h1>
-<h2 class="{{data}}">{{data}}</h2>
-<app-login></app-login>
-<app-sign-in></app-sign-in>
+</li>
 
-<app-user-list></app-user-list>
-<button (click)="getName('hello')">Click</button>
-<br/><br/>
-<input placeholder="keyup" type="text" #box (keyup)="getName(box.value)">
-<br/><br/>
-<input placeholder="keyup" type="text" #box1 (keydown)="getName(box1.value)">
-<br/><br/>
-<h2 (mouseover)="getName('leave')">My name is raju</h2>
-<!-- <br/><br/>
-<input placeholder="keyup" type="text" #box3 (keyup)="getName(box3.value)">
-<br/><br/>
-<input placeholder="keyup" type="text" #box4 (keyup)="getName(box4.value)"> -->
-<h3>Here tutorial 9+10+11</h3>
-<br/><br/>
-<input placeholder="Enetr Your name :" type="text" #box5>
-<button (click)="getValue(box5.value)">Click</button>
-<p>You  enter : {{display}}</p>
-<br/><br/>
+<h2>API data</h2>
 
-<h3>Here tutorial 12</h3>
-<button (click)="getcount('add')">++</button>
-<br/>
-<p>The value : {{count}}</p>
-<br/>
-<button (click)="getcount('Minus')">--</button>
-<br/><br/>
-<h3>Here tutorial 14</h3>
-<input type="text" name="name1" value={{name}} disabled={{val}}>
-<br/><br/>
-<input type="text" name="name2" [value]=name [disabled]=val>
-<br/><br/>
+<app-footer></app-footer>
 
-<h3>Here tutorial 15</h3>
-<h1 *ngIf="show; then ifblock else elseblock"></h1>
+<div *ngFor="let item of users | keyvalue">
+    {{ item.key }} {{ item.value }}
+  </div> -->
 
-<ng-template #ifblock>
-    <p>This is if block</p>
-</ng-template>
 
-<ng-template #elseblock>
-    <p>This is else block</p>
-</ng-template>
+  
 
-<ng-template [ngIf]="color==='red'">
-    <p style="color: red;">Red color</p>
-</ng-template>
-<ng-template [ngIf]="color==='green'">
-    <p style="color:green;">Green color</p>
-</ng-template>
-<ng-template [ngIf]="color==='yellow'">
-    <p style="color:yellow;">Yello color</p>
-</ng-template>
-
-<h3> tutorial Swich cases</h3>
-<div [ngSwitch]="rgb">
-    <h1 *ngSwitchCase="'red'" style="color: red;">Red color</h1>
-    <h1 *ngSwitchCase="'green'" style="color: green;">green color</h1>
-    <h1 *ngSwitchCase="'blue'" style="color: blue;">blue color</h1>
-    <h1 *ngSwitchCase="'violet'" style="color: violet;">violet color</h1>
-</div>
-<h3> tutorial For Loop, Array, Object</h3>
-<p *ngFor="let item of users">{{item}}</p>
-<h2>Object</h2>
-<p *ngFor="let item of users_details">{{item.name}} -- {{item.phone}} -- {{item.nationality}}</p>
-<h3> tutorial style Binding</h3>
-<p [style.color]="displayColor" [style.backgroundColor]="backcolor">Style Binding</p>
-<button (click)="getcolor()">Change Color</button>
-<h3> tutorial Form Create</h3>
-<form #basic="ngForm" (ngSubmit)="getdata(basic.value)">
-    <input type="text" ngModel name="name" placeholder="Enter Your name "><br><br>
-    <input type="text" ngModel name="email" placeholder="Enter Your mail "><br><br>
-    <input type="text" ngModel name="phone" placeholder="Enter Your phone "><br><br>
-    <input type="text" ngModel name="password" placeholder="Enter Your password "><br><br>
-    <button>Register</button>
-
-</form>
-
-<p>
-    name :{{userdata.name}} <br><br>
-    Email :{{userdata.email}}<br><br>
-    Phone : {{userdata.phone}} <br><br>
-    Password : {{userdata.password}}<br><br>
-</p>
-<h3> tutorial Toggle</h3>
-<p *ngIf="tvalue">Show and hide value</p>
-<button (click)="toggle()">Change</button>
-<h3> tutorial Remove and Insert</h3>
-<input type="text" name="name1" placeholder="Enter the name" #task><button (click)="adddata(task.value)">Add</button>
-<p *ngFor="let item of list">
-    {{item.name}} <button (click)="removedata(item.id)">remove</button>
-</p>
-
-<h1>26 Pass Data child to component</h1>
