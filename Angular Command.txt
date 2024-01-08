@@ -1,0 +1,21 @@
+Error solve:
+-npm config set legacy-peer-deps true
+command line problem in vs:
+-Set-ExecutionPolicy -Scope CurrentUser -ExecutionPolicy RemoteSigned
+General command
+-ng serve
+-ng g c component name
+-ng g m module name
+-ng new my-app
+-npm install -g @angular/cli
+-ng serve --open
+
+istall file
+-npm install -g @angular/cli
+-npm i -s @angular/flex-layout
+-ng add @angular/material
+
+Dummy json data create in angular 
+-npm install -g json-server
+create json data then run the bellow code in thode dir
+-json-server --watch db.json/json-server db.json
